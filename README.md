@@ -4,20 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黑曜石帮 - 为你实现一切不可能</title>
+    <title>黑曜石团队 - 为你实现一切愿望</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --main-bg-color: #0a0a14;
-            --secondary-bg-color: #12121d;
-            --accent-color: #00a2ff;
-            --accent-glow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
-            --text-color: #e0e0e0;
-            --dark-text: #8a8a8a;
-            --card-bg: rgba(25, 25, 35, 0.7);
-            --border-radius: 8px;
-        }
-        
         * {
             margin: 0;
             padding: 0;
@@ -26,147 +15,165 @@
         }
         
         body {
-            background: linear-gradient(135deg, var(--main-bg-color), #000);
-            color: var(--text-color);
-            line-height: 1.6;
-            overflow-x: hidden;
-            background-attachment: fixed;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+            color: #fff;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            padding: 20px;
             position: relative;
-        }
-        
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(0, 162, 255, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(0, 162, 255, 0.1) 0%, transparent 40%);
-            z-index: -1;
         }
         
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            width: 100%;
+            z-index: 10;
         }
         
         header {
-            padding: 30px 0;
+            text-align: center;
+            padding: 40px 20px;
             position: relative;
-            border-bottom: 1px solid rgba(0, 162, 255, 0.3);
         }
         
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--accent-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--accent-glow);
+            font-size: 5rem;
+            color: #3498db;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
             animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { box-shadow: 0 0 5px var(--accent-color); }
-            50% { box-shadow: 0 0 20px var(--accent-color); }
-            100% { box-shadow: 0 0 5px var(--accent-color); }
-        }
-        
-        .logo-text {
-            font-size: 2.2rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, var(--accent-color), #00f7ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 10px rgba(0, 162, 255, 0.5);
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 80px 0 60px;
         }
         
         h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--accent-color), #00f7ff);
+            background: linear-gradient(to right, #3498db, #2ecc71);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 15px rgba(0, 162, 255, 0.4);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
         
         .tagline {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 30px;
-            color: var(--dark-text);
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            color: #e0e0e0;
         }
         
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background: transparent;
-            color: var(--accent-color);
-            border: 2px solid var(--accent-color);
-            border-radius: 30px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(0, 162, 255, 0.3);
-            margin-top: 20px;
+        .welcome-text {
+            background: rgba(0, 0, 0, 0.7);
+            border-left: 5px solid #3498db;
+            padding: 25px;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         }
         
-        .cta-button:hover {
-            background: var(--accent-color);
-            color: #000;
-            box-shadow: var(--accent-glow);
-            transform: translateY(-3px);
-        }
-        
-        section {
-            padding: 60px 0;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
+        .contact-section {
             text-align: center;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 800px;
+            box-shadow: 0 0 25px rgba(52, 152, 219, 0.3);
+            border: 1px solid #3498db;
         }
         
-        h2::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: var(--accent-color);
-            box-shadow: var(--accent-glow);
+        .contact-title {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: #3498db;
+        }
+        
+        .contact-info {
+            font-size: 1.8rem;
+            margin: 20px 0;
+            color: #e74c3c;
+            text-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
+        }
+        
+        .contact-button {
+            display: inline-block;
+            background: linear-gradient(to right, #3498db, #2980b9);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.4rem;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .contact-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(to right, #2980b9, #3498db);
         }
         
         .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, mgit init
-git add index.html
-git commit -m "初始提交，添加黑曜石帮主页"
-git remote add origin https:// github.com/ Sperscintilla.git
-git push -u origin master
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 50px 0;
+        }
+        
+        .feature-card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 25px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            border-top: 3px solid #3498db;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+        
+        .feature-desc {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            line-height: 1.5;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            color: #777;
+            font-size: 1.1rem;
+            border-top: 1px solid #222;
+            width: 100%;
+        }
+        
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+       
