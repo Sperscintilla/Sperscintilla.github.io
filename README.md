@@ -168,5 +168,5 @@
             grid-template-columns: repeat(auto-fit, mgit init
 git add index.html
 git commit -m "初始提交，添加黑曜石帮主页"
-git remote add origin https://gitee.com/ Sperscintilla.git
+git remote add origin https:// github.com/ Sperscintilla.git
 git push -u origin master
